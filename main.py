@@ -46,7 +46,7 @@ cv2.waitKey(0)
 
 T = threshold_local(warped_image, 11, offset=10, method="gaussian")
 warped = (warped_image > T).astype("uint8") * 255
-cv2.imwrite('./'+'scan'+'.png',warped)
+cv2.imwrite('./'+'scan'+'.png', warped)
 
 cv2.imshow("Final Scanned image", imutils.resize(warped, height=650))
 cv2.waitKey(0)
